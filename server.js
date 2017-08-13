@@ -19,14 +19,16 @@ var articles={
             </p>`
     
 },
-     'article-two': {title:'article-Two|Akanksha Dixit',
+     'article-two': {
+    title:'article-Two|Akanksha Dixit',
     heading:'article-Two',
-    date:'sep 05,2016',
+    date:'sep 10,2016',
     content:`<p>this is content of my second article.</p>`
     },
-     'article-three': {title:'article-Three|Akanksha Dixit',
+     'article-three':  {
+    title:'article-Three|Akanksha Dixit',
     heading:'article-Three',
-    date:'sep 05,2016',
+    date:'sep 15,2016',
     content:`<p>this is content of my third article.</p>`}
 };
 
