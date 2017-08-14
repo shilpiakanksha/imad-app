@@ -13,5 +13,5 @@ button.onclick = function(){
         }
     };
     request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
-    requet.send(null);
+    request.send(null);
 };
