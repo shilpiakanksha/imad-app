@@ -21,8 +21,7 @@ var counter = 0;
      };
      
    //make the request
-   request.open ('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
-   request.send(null);
+
   counter = counter + 1;
  
  };
