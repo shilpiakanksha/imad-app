@@ -1,11 +1,8 @@
 //counter code
 var button = document.getElementById('counter');
-
 button.onclick = function(){
    //create a request object
   var request = new XMLHttpRequest();
-  
- 
   //capture a response and store it in a variable
   request.onreadystatechange = function(){
      if(request.onreadyState ===  XMLHttpRequest.DONE){
@@ -18,35 +15,21 @@ button.onclick = function(){
     }
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
-             
          }
      }  
-     
      //not done yet
   };
-  
   //make the request
-  
   request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
   request.send(null);
-  
 };
-
 //submit name
-
-
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //make a request to server and send name
-    
-    
-    //capture a list of name and render it as list
-
-    
+    //capture a list of name and render it as lis
    //create a request object
   var request = new XMLHttpRequest();
-  
- 
   //capture a response and store it in a variable
   request.onreadystatechange = function(){
      if(request.onreadyState ===  XMLHttpRequest.DONE){
@@ -60,19 +43,14 @@ submit.onclick = function(){
     }
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
-             
          }
      }  
-     
      //not done yet
   };
-  
   //make the request
-  
 var nameInput = document.getElementById('name');
 var names = nameInput.value;
   request.open('GET','http://akanksha2340.imad.hasura-app.io/submit_name?name='+ name ,true);
   request.send(null);
-    
 };
 
