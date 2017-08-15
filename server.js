@@ -76,6 +76,13 @@ app.get('/', function (req, res) {
 });
 
 
+
+var counter=0;
+app.get('/counter',function(req,res){
+    counter = counter + 1;
+    res.send(counter.toString() );
+});
+
 var names = [];
 app.get('/submit-name',function(req,res){
     var name = req.query.name;
@@ -84,14 +91,6 @@ app.get('/submit-name',function(req,res){
     res.send(JSON.stringify(names));
     
 });
-
-var counter=0;
-app.get('/counter',function(req,res){
-    counter = counter + 1;
-    res.send(counter.toString() );
-});
-
-
 
 
 
