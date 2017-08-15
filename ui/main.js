@@ -1,35 +1,49 @@
-<!doctype html>
-<html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-    </head>
-    <body>
-        <div class="container">
-        <div class="center">
-            <img id="madi" src="https://pbs.twimg.com/profile_images/894970070534725632/Z-ovqzdv_400x400.jpg" class="img-medium"/>
-        </div>
-        <br>
-        <h3>personal</h3>
-        <div>
-            Hi, my name is akanksha Dixit
-            </div>
-       <hr/>
-        <h3>profesional</h3>
-        <div>
-           I am not working
-         </div>
-       <hr/>
-       <div class="footer">
-          this button <button id="counter"> click me</button> has been clicked <span id="count">0</span> times
-          <hr/>
-          <input type="text" id="name" placeholder="name"/>
-          <input type="submit" id="submit_btn" value="submit"/>
-          <ul id="namelist">
+button.onclick = function(){
+   //create a request object
+  var request = new XMLHttpRequest();
+  
+ 
+  //capture a response and store it in a variable
+  request.onreadystatechange = function(){
+     if(request.onreadyState ===  XMLHttpRequest.DONE){
+         //take some action
+         if ( request.status === 200 ){
+             var counter = request.responseText;
+             var span = document.getElementByTd('count');
+             span.innerHTML = counter.toString();
+             
+         }
+     }  
+     
+     //not done yet
+  };
+  
+  //make the request
+  
+  request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
+  request.send(null);
+  
+};
 
-          </ul>
-        </div>
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
-</html>
+//submit name
+
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function(){
+    //make a request to server and send name
+    
+    
+    //capture a list of name and render it as list
+    var names = ['name1','name2','name3','name4'];
+    var list = '';
+    for(var i=0; i<name.length;  i++){
+       list += '<li>' + name[i] + '</li>';
+    }
+   var ul = document.getElementById('namelist');
+   ul.innerHTML = list;
+    
+    
+    
+};
+
