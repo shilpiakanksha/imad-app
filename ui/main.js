@@ -8,6 +8,16 @@
      
      
      //capture the respone and store it in a variable
+     ready.onreadystatechange = function(){
+        if(request.onreadystatechange ===  XMLHttpRequest.DONE ){
+            //take some action
+            if(request.status === 200){
+                var counter = request.responseText;
+     
+            }
+            
+        }
+     };
      
    //make the request
 
