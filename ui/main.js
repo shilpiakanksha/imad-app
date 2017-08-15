@@ -32,19 +32,17 @@
  var submit = document.getElementById('submit_btn');
  submit.onclick = function(){
 
-      //make a request to counter endpoint
+      //create a request object
      var request = new XMLHttpRequest();
-     
      
      //capture the respone and store it in a variable
      request.onreadystatechange = function(){
         if(request.readyState ===  XMLHttpRequest.DONE ){
             //take some action
             if(request.status === 200){
-                 //capture a list
-
+                 //capture a list of name and render it as list
      var names = request.responseText;
-     names=JSON.parse(names);
+     names = JSON.parse(names);
      var list = '';
      for(var i=0; i<name.length; i++){
          list += '<li>' + ['name'] + '</li>';
@@ -61,10 +59,5 @@
  //make the request
    request.open ('GET','http://akanksha2340.imad.hasura-app.io/submit-name?name='+ name, true);
    request.send(null);
- 
-    
-
-     
-     
  };
  
