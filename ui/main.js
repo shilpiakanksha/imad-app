@@ -8,9 +8,13 @@ button.onclick = function(){
      if(request.onreadyState ===  XMLHttpRequest.DONE){
          //take some action
          if ( request.status === 200 ){
-             var counter = request.responseText;
-             var span = document.getElementByTd('count');
-             span.innerHTML = counter.toString();
+              var names = ['name1','name2','name3','name4'];
+    var list = '';
+    for(var i=0; i<name.length;  i++){
+       list += '<li>' + name[i] + '</li>';
+    }
+   var ul = document.getElementById('namelist');
+   ul.innerHTML = list;
              
          }
      }  
@@ -35,15 +39,12 @@ submit.onclick = function(){
     
     
     //capture a list of name and render it as list
-    var names = ['name1','name2','name3','name4'];
-    var list = '';
-    for(var i=0; i<name.length;  i++){
-       list += '<li>' + name[i] + '</li>';
-    }
-   var ul = document.getElementById('namelist');
-   ul.innerHTML = list;
+
     
     
+      //make the request
+  request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
+  request.send(null);
     
 };
 
