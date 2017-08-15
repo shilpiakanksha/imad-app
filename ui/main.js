@@ -8,7 +8,7 @@
      
      
      //capture the respone and store it in a variable
-     ready.onreadystatechange = function(){
+     request.onreadystatechange = function(){
         if(request.readystate ===  XMLHttpRequest.DONE ){
             //take some action
             if(request.status === 200){
