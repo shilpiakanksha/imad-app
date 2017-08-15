@@ -70,7 +70,7 @@ submit.onclick = function(){
   
   //make the request
   
-  request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
+  request.open('GET','http://akanksha2340.imad.hasura-app.io/submit_name?name='+ name ,true);
   request.send(null);
     
 };
