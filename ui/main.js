@@ -1,6 +1,6 @@
  // conter cod
  var button = document.getElementById('counter');
-var counter = 0;
+ var counter = 0;
  button.onclick = function(){
      
      //make a request to counter endpoint
@@ -8,16 +8,6 @@ var counter = 0;
      
      
      //capture the respone and store it in a variable
-     ready.onreadystatechange = function(){
-        if(request.readystate ===  XMLHttpRequest.DONE ){
-            //take some action
-            if(request.status === 200){
-                var counter = request.responseText;
-     
-            }
-            
-        }
-     };
      
    //make the request
 
