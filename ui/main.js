@@ -8,14 +8,8 @@ button.onclick = function(){
   
   request.onreadystatechange = function(){
      if(request.readyState ===  XMLHttpRequest.DONE){
-         //take some action
-         
-         if ( request.status === 200 ){
-            var names = ['name1','name2','name3','name4'];
-             var list = '';
-         for(var i=0; i<name.length;  i++){
-             list += '<li>' + name[i] + '</li>';
-  }
+
+
   
     var counter = request.ResponseText;
     var span = document. getElementById('count');
@@ -24,7 +18,7 @@ button.onclick = function(){
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
          }
-     }  
+     }  ;
      //not done yet
   };
   //make the request
