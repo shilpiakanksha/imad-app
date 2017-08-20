@@ -9,15 +9,18 @@ button.onclick = function(){
   request.readystatechange = function(){
      if(request.onreadyState ===  XMLHttpRequest.DONE){
          //take some action
+         
          if ( request.status === 200 ){
-              //var names = ['name1','name2','name3','name4'];
-   // var list = '';
-   // for(var i=0; i<name.length;  i++){
-      // list += '<li>' + name[i] + '</li>';
-   // }
+            var names = ['name1','name2','name3','name4'];
+             var list = '';
+         for(var i=0; i<name.length;  i++){
+             list += '<li>' + name[i] + '</li>';
+  }
+  
     var counter = request.ResponseText;
     var span = document. getElementById('count');
     span.innerHTML(counter.toString());
+    
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
          }
