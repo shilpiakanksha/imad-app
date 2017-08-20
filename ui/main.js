@@ -6,10 +6,14 @@ button.onclick = function(){
   var request = new XMLHttpRequest();
   //capture a response and store it in a variable
   
-  
+  request.onreadystatechange = function(){
+
+     }  ;
+     //not done yet
+  };
   //make the request
   request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
-
+  request.send(null);
 };
 
 
