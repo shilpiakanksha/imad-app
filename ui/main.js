@@ -7,8 +7,6 @@ button.onclick = function(){
   //capture a response and store it in a variable
   
   request.onreadystatechange = function(){
-     if(request.readyState ===  XMLHttpRequest.DONE){
-
 
   
     var counter = request.ResponseText;
@@ -17,8 +15,8 @@ button.onclick = function(){
     
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
-         }
-     }  ;
+         };
+     
      //not done yet
   };
   //make the request
