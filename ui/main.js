@@ -2,6 +2,7 @@
 var button = document.getElementById('counter');
 button.onclick = function(){
     
+    
    //create a request object
   var request = new XMLHttpRequest();
   //capture a response and store it in a variable
@@ -9,11 +10,14 @@ button.onclick = function(){
      if(request.onreadyState ===  XMLHttpRequest.DONE){
          //take some action
          if ( request.status === 200 ){
-              var names = ['name1','name2','name3','name4'];
-    var list = '';
-    for(var i=0; i<name.length;  i++){
-       list += '<li>' + name[i] + '</li>';
-    }
+              //var names = ['name1','name2','name3','name4'];
+   // var list = '';
+   // for(var i=0; i<name.length;  i++){
+      // list += '<li>' + name[i] + '</li>';
+   // }
+    var counter = request.ResponseText;
+    var span = document. getElementById('count');
+    span.innerHTML(counter.toString());
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
          }
