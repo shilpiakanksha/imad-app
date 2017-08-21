@@ -13,31 +13,26 @@ button.onclick = function(){
            var counter = request.responseText;
              var span = document. getElementById('count');
                 span.innerHTML(counter.toString());
-  }
+       }
   
-}
-    
-
-  };
-     }  
-     //not done yet
-  }
-  //make the request
-  request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
-  request.send(null);
-};
-
+          } //not done yet
+             };
+             
+             //make the request
+    request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
+      request.send(null);
+              };
 
 //submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     
-
-   //create a request object
-  var request = new XMLHttpRequest();
-  
+    //create request
+     var request = new XMLHttpRequest();
+    
+    //make a request to server and send name
+    
+    
   //capture a response and store it in a variable
   request.onreadystatechange = function(){
      if(request.readyState ===  XMLHttpRequest.DONE){
@@ -58,7 +53,8 @@ submit.onclick = function(){
   };
   
   //make the request
-
+  var nameInput = document.getElementById('name');
+  var name = nameInput.value;
   request.open('GET','http://akanksha2340.imad.hasura-app.io/submit-name?name='+ name ,true);
  request.send(null);
 };
