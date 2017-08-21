@@ -8,6 +8,7 @@ button.onclick = function(){
   //capture a response and store it in a variable
   request.onreadystatechange = function () {
      if(request.readyState ===  XMLHttpRequest.DONE){
+         //take some action
          if (request.status === 200){
            var counter = request.responseText;
              var span = document. getElementById('count');
@@ -18,12 +19,12 @@ button.onclick = function(){
     
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
-         };
+  };
      }  
      //not done yet
-  };
+  }
   //make the request
-  request.open('GET','http://akanksha2340.imad.hasura-app.io/submit-name?name='+ name ,true',true);
+  request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
   request.send(null);
 };
 
