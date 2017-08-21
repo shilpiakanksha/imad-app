@@ -48,7 +48,7 @@ submit.onclick = function(){
   };
   
   //make the request
-  var nameInput = document.getElementById('names');
+  var nameInput = document.getElementById('name');
   var name = nameInput.value;
   request.open('GET','http://akanksha2340.imad.hasura-app.io/submit-name?name='+ name ,true);
  request.send(null);
