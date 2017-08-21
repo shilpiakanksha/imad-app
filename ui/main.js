@@ -4,16 +4,17 @@ button.onclick = function(){
     
      //create a request object
   var request = new XMLHttpRequest();
-  //capture a response and store it in a variable
   
-  request.onreadystatechange = function(){
+  //capture a response and store it in a variable
+  request.onreadystatechange = function () {
      if(request.readyState ===  XMLHttpRequest.DONE){
+         if (request.status === 200){
            var counter = request.responseText;
-    var span = document. getElementById('count');
-    span.innerHTML(counter.toString());
+             var span = document. getElementById('count');
+                span.innerHTML(counter.toString());
   }
   
-
+}
     
    var ul = document.getElementById('namelist');
    ul.innerHTML = list;
