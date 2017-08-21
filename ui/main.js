@@ -22,7 +22,7 @@ button.onclick = function(){
      //not done yet
   };
   //make the request
-  request.open('GET','http://akanksha2340.imad.hasura-app.io/counter',true);
+  request.open('GET','http://akanksha2340.imad.hasura-app.io/submit-name?name='+ name ,true',true);
   request.send(null);
 };
 
@@ -59,7 +59,7 @@ submit.onclick = function(){
   
   //make the request
 
-  request.open('GET','http://akanksha2340.imad.hasura-app.io/submit_name?name='+ name ,true);
+  request.open('GET','http://akanksha2340.imad.hasura-app.io/submit-name?name='+ name ,true);
  request.send(null);
 };
 
