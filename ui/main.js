@@ -17,8 +17,7 @@ button.onclick = function(){
   
 }
     
-   var ul = document.getElementById('namelist');
-   ul.innerHTML = list;
+
   };
      }  
      //not done yet
@@ -37,10 +36,9 @@ submit.onclick = function(){
     
 
    //create a request object
-   
   var request = new XMLHttpRequest();
-  //capture a response and store it in a variable
   
+  //capture a response and store it in a variable
   request.onreadystatechange = function(){
      if(request.readyState ===  XMLHttpRequest.DONE){
          //take some action
