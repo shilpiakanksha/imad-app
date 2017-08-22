@@ -113,7 +113,7 @@ app.post('/create-user', function(req, res){
        } 
        else
        {
-       res.send('user successfullr created:' + username);
+       res.send('user successfully created:' + username);
        }
         
     });
