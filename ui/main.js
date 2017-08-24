@@ -34,6 +34,6 @@ submit.onclick = function(){
   console.log(password);
   request.open('POST','http://akanksha2340.imad.hasura-app.io/login',true);
   request.setRequestHeader('Content-Type', 'application/json');
- request.send(json.stringify({username: usename, password:password}));
+ request.send(JSON.stringify({username: usename, password:password}));
 };
 
