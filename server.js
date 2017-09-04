@@ -150,11 +150,11 @@ app.post('/login',  function(req, res){
     
 });
 
-var Pool = new Pool(config);
+var pool = new pool(config);
 app.get('/test-db', function( req, res ){
     //make a select request
     //return response with result
-    Pool.query('SELECT * from test', function(err, result){
+    pool.query('SELECT * from test', function(err, result){
        if(err){
            res.status(500).send(err.toString());
        } 
