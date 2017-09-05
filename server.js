@@ -107,7 +107,7 @@ app.post('/create-user', function(req, res){
     var password = req.body.password;
     var salt = crypto.getRandomBytes(128).toString('hex');
     var dbString = hash(password, salt);
-    Pool.query('INSERT INTO "user"(username, password) VALUES($1, $2)',[username, dbString], function(err, result){
+    pool.query('INSERT INTO "user"(username, password) VALUES($1, $2)',[username, dbString], function(err, result){
          if(err){
            res.status(500).send(err.toString());
        } 
@@ -124,7 +124,7 @@ app.post('/login',  function(req, res){
     var password = req.body.password;
     
   
-    Pool.query('SELECT * FROM "user" WHERE username = $1'  ,[username], function(err, result){
+    pool.query('SELECT * FROM "user" WHERE username = $1'  ,[username], function(err, result){
          if(err){
            res.status(500).send(err.toString());
        } 
@@ -136,8 +136,8 @@ app.post('/login',  function(req, res){
           //match the password
           var dbString = result.rows[0].password;
          var salt =  dbString.split('$')[2];
-         var hashedpasswowrd = hash(password, salt);//create hash 
-         if(hashedpassword === dbString){
+         var hashedPasswowrd = hash(password, salt);//create hash 
+         if(hashedPassword === dbString){
        res.send('credentials correct');
          }else{
               res.send(403).send('username/password is invalid');
