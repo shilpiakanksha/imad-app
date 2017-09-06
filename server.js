@@ -16,6 +16,10 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
+app.use(session({
+    secret: 'someRandomSecretVAlue',
+    cookie: {maxAge: 1000 * 60 * 60 * 24 * 30}
+}));
 
 var articles = {
      'article-one':{
@@ -137,6 +141,9 @@ app.post('/login',  function(req, res){
          var salt =  dbString.split('$')[2];
          var hashedPasswowrd = hash(password, salt);//create hash 
          if(hashedPassword === dbString){
+             
+             req.session.auth = {userId: result.rows[0].id};
+             
        res.send('credentials correct');
          }else{
               res.send(403).send('username/password is invalid');
@@ -147,6 +154,15 @@ app.post('/login',  function(req, res){
         
     });
     
+});
+
+app.get('/check-login',function(req, res){
+    if(req.session && req.session.auth && request.session.auth.userId){
+        res.send('you are logged in:' + req.session.auth.userId.toString());
+    }else
+    {
+        res.send('you are not logged in');
+    }
 });
 
 var pool = new Pool(config);
