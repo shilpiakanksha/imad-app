@@ -133,7 +133,7 @@ app.post('/login',  function(req, res){
        } 
        else{
        if(result.rows.length === 0){
-           res.send(403).send('username/password is invalid');
+           res.status(403).send('username/password is invalid');
        }    
        else{
           //match the password
@@ -146,7 +146,7 @@ app.post('/login',  function(req, res){
              
        res.send('credentials correct');
          }else{
-              res.send(403).send('username/password is invalid');
+              res.status(403).send('username/password is invalid');
          }
        
        }
