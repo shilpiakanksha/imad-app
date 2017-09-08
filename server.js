@@ -132,7 +132,7 @@ app.post('/login',  function(req, res){
      var username = req.body.username;
     var password = req.body.password;
     
-    pool.query('SELECT * FROM "user" WHERE username = $1'  ,[username], function(err, result){
+    pool.query('SELECT * FROM "user" WHERE username = $1',[username], function(err, result){
          if(err){
            res.status(500).send(err.toString());
        } 
@@ -222,6 +222,9 @@ app.get('/articles/:articleName', function (req, res) {
     } );
 });
 
+app.get('/login', function (req,res) {
+     res.send("Logged in");
+ });
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
