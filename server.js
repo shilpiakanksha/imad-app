@@ -28,8 +28,12 @@ var articles = {
     title:'article-one|Akanksha Dixit',
     heading:'article-one',
     date:'sep 05,2016',
-    content:`<p>this is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first article
-            </p>
+    content:`<p>this is content of my first article
+this is content of my first article
+this is content of my first article
+this is content of my first article
+this is content of my first article
+this is content of my first article</p>
             <p>this is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first article.
             </p>
             <p>this is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first articlethis is content of my first article.
